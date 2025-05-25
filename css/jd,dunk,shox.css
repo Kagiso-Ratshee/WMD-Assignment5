@@ -1,0 +1,171 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: hsla(192, 87%, 60%, 0.239);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#banner {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px;
+}
+
+#banner img {
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+#navmenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#navlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navlist > li > a {
+    border: 2px solid rgba(255, 255, 255, 0.726);
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: rgba(129, 219, 200, 0.445);
+    color: black;
+    transition: 0.3s ease;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;/* Prevent text wrapping */
+}
+
+#navlist > li > a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(60, 138, 255);
+    background-color: #add1dfab;
+}
+
+#newarrivalstxt > p#nrt{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+#newarrivalstxt{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+.image-showbox {
+    display: flex;
+    flex-wrap: nowrap; /* forces horizontal layout */
+    overflow-x: auto;  /* allows scrolling if content overflows */
+    gap: 20px;
+    padding: 20px;
+    background-color: transparent;
+}
+.wtxt{
+    flex: 0 0 auto; /* don't grow or shrink */
+    text-align: center;
+    width: 230px; /* adjust to desired image width */
+}
+.text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: black;
+    box-shadow: 0 0 10px rgba(212, 157, 157, 0.5);
+     background-color: hsla(192, 81%, 61%, 0.384);
+}
+
+.wtxt img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.wtxt img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px white;
+    color: black;
+    font-size: 1rem;
+}
+/*Hover effect for images*/
+.image-showbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px white;
+}
+
+#homefooter {
+    border-top: 2px solid lightgray;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(131, 129, 126, 0.527);
+}
+#homefooter > p#contactus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    color: black;
+}
+
+#homefooter > p#rights{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+
+#whatsapp,
+#xlogo,
+#ig {
+    width: 35px;
+    border-radius: 15px;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+#whatsapp:hover,
+#xlogo:hover,
+#ig:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 0px 3px rgb(252, 252, 252);
+}
+
+/* === MEDIA QUERIES === */
+/* Medium screens (tablets) — 3 per row */
+@media (max-width: 1024px) {
+    .wtxt img {
+        flex: 1 1 calc(30% - 20px);
+        max-width: calc(30% - 20px);
+    }
+}
+
+/* Small screens (phones) — 2 per row */
+@media (max-width: 600px) {
+    .wtxt img {
+        flex: 1 1 calc(45% - 10px);
+        max-width: calc(45% - 10px);
+    }
+}
+
+/* Very small screens — full width */
+@media (max-width: 400px) {
+    .wtxt img {
+        flex: 1 1 90%;
+        max-width: 90%;
+    }
+}
+/* Mobile Device Adjustments for Navlist */
+@media (max-width: 600px) {
+    #navlist > li > a {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+

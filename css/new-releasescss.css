@@ -1,0 +1,136 @@
+#container{
+    display: flex;
+    gap: 20px;
+}
+#logo{
+    margin-bottom: 15px;
+}
+#logo img{
+    width: 200px;
+    margin-left: 40%;
+    margin-right: 50%;
+    margin-bottom: 15px;
+}
+body{
+    color: rgb(0, 0, 0);
+    background-color: hsla(192, 87%, 60%, 0.239);
+}
+
+#navmenu{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#navlist{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 1500px;
+}
+
+#navlist > li > a{
+    display: inline;
+    border: 2px solid;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    border-color: rgba(255, 255, 255, 0.726);
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(129, 219, 200, 0.445);
+}
+
+#navlist > li > a:hover{
+    transform: scale(1.9); /* Increase size */
+    box-shadow: 0px 4px 8px rgba(60, 138, 255); /* Add shadow */
+    background-color:#add1dfab ;
+}
+#newarrivalstxt > p#nrt{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+#newarrivalstxt{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+#conti1,#conti2,#conti3{
+    display: inline-block;
+}
+
+.box {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: transparent;
+}
+
+/* === PRODUCT IMAGES === */
+.box img {
+    width: 100%;
+    height: auto;
+    animation: slideInFromLeft 2s ease-in-out;
+    transition: 0.3s ease;
+}
+
+.box img:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 0px 3px rgb(252, 252, 252);
+}
+
+/* === HEADINGS & TEXT === */
+.divheadings {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.descriptions {
+    box-shadow: 1px 1px 0px 1px rgb(252, 252, 252);
+    border-radius: 10px;
+    background-color: rgba(171, 219, 245, 0.514);
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+
+#conti1 img,#conti2 img,#conti3 img{
+    width: 100%;
+    gap: 10px;
+}
+
+#homefooter{
+    border: 2px solid;
+    border-color: lightgray;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(131, 129, 126, 0.527);
+}
+
+#whatsapp:hover,#xlogo:hover,#ig:hover{
+    transform: scale(1.1); /* Increase size */
+    box-shadow: 0px 0px 0px 3px rgb(252, 252, 252); /* Add shadow */
+}
+
+#homefooter > p#contactus{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16pt;
+    text-decoration: underline;
+    color: black;
+}
+
+#homefooter > p#rights{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+#whatsapp,#xlogo,#ig{
+    width: 40px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}

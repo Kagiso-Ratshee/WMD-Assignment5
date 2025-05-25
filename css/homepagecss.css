@@ -1,0 +1,252 @@
+/* === GENERAL STYLING === */
+body {
+    color: rgb(0, 0, 0);
+    background-color: hsla(192, 87%, 60%, 0.239);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* === BANNER === */
+#banner img {
+    width: 50%;
+    max-width: 200px;
+    display: block;
+    margin: 30px auto 50px auto;
+}
+
+/* === HEAD SECTION === */
+#headsection {
+    background-image: url(../images/noct.jpg);
+    background-size: cover;
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.head {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px #8bc3e975;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* === NAVIGATION === */
+#navmenu {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#navlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+#navlist > li > a {
+    border: 2px solid lightblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Prevent text wrapping */
+@media (max-width: 600px) {
+    #navlist > li > a {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+
+#navlist > li > a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 1px 4px rgb(199, 202, 252);
+    background-color: #a3d6ee81;
+}
+
+/* === BEST SELLERS === */
+#bestsell {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 30px auto;
+    box-shadow: 1px 2px 3px 2px rgb(146, 147, 150);
+    width: 90%;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-decoration: underline;
+}
+
+/* === PRODUCT SECTION === */
+#newreleaserow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.box {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: transparent;
+}
+
+/* === PRODUCT IMAGES === */
+.box img {
+    width: 100%;
+    height: auto;
+    animation: slideInFromLeft 2s ease-in-out;
+    transition: 0.3s ease;
+}
+
+.box img:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 0px 3px rgb(252, 252, 252);
+}
+
+/* === HEADINGS & TEXT === */
+.divheadings {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.descriptions {
+    box-shadow: 1px 1px 0px 1px rgb(252, 252, 252);
+    border-radius: 10px;
+    background-color: rgba(171, 219, 245, 0.514);
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+/* === BUTTONS === */
+#txt1, #txt2, #txt3 {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(237, 249, 253);
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    display: block;
+    margin: 15px auto;
+}
+
+#txt1:hover, #txt2:hover, #txt3:hover {
+    transform: scale(1.1);
+}
+
+/* === COMPANY INFO === */
+#companydet {
+    color: white;
+    background-image: url(../images/formtrial6.jpg);
+    box-shadow: 0px 0px 0px 3px rgb(252, 252, 252);
+    padding: 20px;
+}
+
+#companyhead {
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#companydetails {
+    border-radius: 10px;
+    background-color: rgba(189, 224, 243, 0.432);
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.details {
+    font-size: 1rem;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#nike {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* === FOOTER === */
+#homefooter {
+    border: 2px solid lightgray;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(131, 129, 126, 0.527);
+    padding: 20px;
+}
+
+#homefooter > p#contactus {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+#homefooter > p#rights{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+
+#whatsapp, #xlogo, #ig {
+    width: 35px;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+
+/* === ANIMATIONS === */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+    .head {
+        font-size: 1.8rem;
+    }
+
+    #navlist > li > a {
+        padding: 8px 12px;
+    }
+
+    #txt1, #txt2, #txt3 {
+        width: 60%;
+    }
+
+    .details {
+        font-size: 0.9rem;
+    }
+
+    #companyhead {
+        font-size: 1.2rem;
+    }
+
+    #homefooter > p {
+        font-size: 1rem;
+    }
+}
