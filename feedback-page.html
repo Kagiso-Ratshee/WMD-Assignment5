@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="css/feedbackcss.css">
+</head>
+<body>
+    <div id="wrapper">
+        <form id="feedbackForm" action="mailto:ratsheekagiso@gmail.com" method="post" enctype="text/plain">
+            <header id="txt">Feedback Form</header>
+        <div class="row">
+          <p class="form-control"> Please fill out this short customer feedback form so as to ensure top quality service to all our customers.</p>
+            <div class="col">
+                <p>Name(s):</p>
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+            </div>
+            <div class="col">
+                <p>Email:</p>
+              <input type="Email" class="form-control" placeholder="Email" aria-label="Email" required>
+            </div>
+          <div class="input-group mb-3 col">
+            <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+          <div class="col" id="radio" class="ratings">
+                  <p>How would you rate your experience with us?</p>
+                  <label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+                  <label><input type="radio" name="rating" value="Good"> Good</label>
+                  <label><input type="radio" name="rating" value="Average"> Average</label>
+                  <label><input type="radio" name="rating" value="Poor"> Poor</label>
+                </div>
+          <div class="mb-3 col">
+            <p class="form-control">Suggestion box to improve your experience with us:</p>
+            <label for="exampleFormControlTextarea1" class="input-group-text"></label>
+            <textarea id="comment" class="form-control" id="exampleFormControlTextarea1" rows="6" maxlength="250"></textarea>
+            <div class="char-count" id="charCount">0 / 250</div>
+          </div>
+          <div id="button">
+            <button id="submit" class="btns">Submit</button>
+            <button id="backtohome" class="btns"><a href="index.html">Back to Home</a></button>
+          </div>
+          <div id="confirmationMessage">Thank you! Your feedback has been submitted.</div>
+        </div>
+        </div>
+          </form>
+    </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("feedbackForm");
+    const feedback = document.getElementById("comment");
+    const charCount = document.getElementById("charCount");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+
+    // Update character counter
+    feedback.addEventListener("input", function () {
+      const currentLength = feedback.value.length;
+      charCount.textContent = `${currentLength} / 250`;
+    });
+
+    // Handle form submission
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent actual submission
+      form.reset(); // Clear form
+      charCount.textContent = "0 / 250"; // Reset counter
+      confirmationMessage.style.display = "block"; // Show message
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        confirmationMessage.style.display = "none";
+      }, 5000);
+    });
+  });
+</script>
+
+</body>
+</html>
