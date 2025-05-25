@@ -14,18 +14,18 @@
           <p class="form-control"> Please fill out this short customer feedback form so as to ensure top quality service to all our customers.</p>
             <div class="col">
                 <p>Name(s):</p>
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+              <input type="text" class="form-control"  name="First name" aria-label="First name" required>
             </div>
             <div class="col">
                 <p>Email:</p>
-              <input type="Email" class="form-control" placeholder="Email" aria-label="Email" required>
+              <input type="Email" class="form-control" name="Email" placeholder="Email" aria-label="Email" required>
             </div>
           <div class="input-group mb-3 col">
             <label class="input-group-text" for="inputGroupSelect01">Gender</label>
-            <select class="form-select" id="inputGroupSelect01">
+            <select class="form-select" id="inputGroupSelect01" name="Gender" required>
               <option selected>Choose...</option>
-              <option value="1">Male</option>
-              <option value="2">Female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
           <div class="col" id="radio" class="ratings">
@@ -37,8 +37,8 @@
                 </div>
           <div class="mb-3 col">
             <p class="form-control">Suggestion box to improve your experience with us:</p>
-            <label for="exampleFormControlTextarea1" class="input-group-text"></label>
-            <textarea id="comment" class="form-control" id="exampleFormControlTextarea1" rows="6" maxlength="250"></textarea>
+            <label for="comment" class="input-group-text"></label>
+            <textarea id="comment" class="form-control"  name="comment" rows="6" maxlength="250"></textarea>
             <div class="char-count" id="charCount">0 / 250</div>
           </div>
           <div id="button">
@@ -64,8 +64,6 @@
     });
 
     // Handle form submission
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent actual submission
       form.reset(); // Clear form
       charCount.textContent = "0 / 250"; // Reset counter
       confirmationMessage.style.display = "block"; // Show message
@@ -75,7 +73,6 @@
         confirmationMessage.style.display = "none";
       }, 5000);
     });
-  });
 </script>
 
 </body>
